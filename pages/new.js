@@ -69,7 +69,7 @@ const NewNote = () => {
 
     return(
         <div className="form-container">
-            <h1>Create Note</h1>
+            <h1>ADD TASK</h1>
             <div>
                 {
                     isSubmitting
