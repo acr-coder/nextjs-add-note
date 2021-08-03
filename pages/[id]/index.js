@@ -35,15 +35,15 @@ const Note = ({ note }) => {
         close();
     }
     return (
-        <div className="note-container">
+        <div className="container">
             {isDeleting
                 ? <Loader active />
                 :
-                <>
-                <h1>{note.title}</h1>
-                <p>{note.description}</p>
-                <Button color="red" onClick={open}>Delete</Button>
-                </>          
+                <div className="container p-5">
+                    <h1>{note.title}</h1>
+                    <p>{note.description}</p>
+                    <Button color="red" onClick={open}>Delete</Button>
+                </div>          
             
             }
             <Confirm
