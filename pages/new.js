@@ -27,7 +27,7 @@ const NewNote = () => {
 
     const createNote = async () => {
         try {
-            const res = await fetch('https://nextjs-add-note.vercel.app/api/notes', {
+            const res = await fetch('http://localhost:3000/api/notes', {
                 method: 'POST',
                 headers: {
                     "Accept":"application/json",
@@ -68,7 +68,7 @@ const NewNote = () => {
     
 
     return(
-        <div className="form-container">
+        <div className="container">
             <h1>ADD TASK</h1>
             <div>
                 {

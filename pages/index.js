@@ -4,9 +4,9 @@ import { Button, Card } from "semantic-ui-react";
 
 export default function Home({ notes }) {
   return (
-    <div className="notes-container">
+    <div className="container">
       <h1>Notes</h1>
-      <div className="grid wrapper">
+      <div className="d-flex flex-wrap">
         {notes.map((note) => {
           return (
             <div key={note._id}>
@@ -39,7 +39,7 @@ export default function Home({ notes }) {
 }
 
 Home.getInitialProps = async () => {
-  const res = await fetch("https://nextjs-add-note.vercel.app/api/notes");
+  const res = await fetch("http://localhost:3000/api/notes");
   const { data } = await res.json();
 
   return { notes: data };

@@ -27,7 +27,7 @@ const EditNote = ({ note }) => {
 
     const updateNote = async () => {
         try {
-            const res = await fetch(`https://nextjs-add-note.vercel.app/api/notes/${router.query.id}`, {
+            const res = await fetch(`http://localhost:3000/api/notes/${router.query.id}`, {
                 method: 'PUT',
                 headers: {
                     "Accept":"application/json",
@@ -68,7 +68,7 @@ const EditNote = ({ note }) => {
     
 
     return(
-        <div className="form-container">
+        <div className="container">
             <h1>Update Note</h1>
             <div>
                 {
@@ -104,7 +104,7 @@ const EditNote = ({ note }) => {
 }
 
 EditNote.getInitialProps = async ({ query: { id }}) => {
-    const res = await fetch(`https://nextjs-add-note.vercel.app/api/notes/${id}`);
+    const res = await fetch(`http://localhost:3000/api/notes/${id}`);
     const { data } = await res.json();
 
     return { note: data }

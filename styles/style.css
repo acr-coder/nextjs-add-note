@@ -1,6 +1,4 @@
-.notes-container{
-    background-color: rgb(211, 211, 136);
-}
+
 h1{
     text-align: center;
 }
@@ -39,10 +37,13 @@ h1{
     text-align: center;
     margin-top: 20px;
 }
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+.box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.date{
+    font-size: 10px;
 }
 
 
