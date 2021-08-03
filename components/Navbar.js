@@ -7,10 +7,10 @@ const Navbar = () => {
         
         <nav className="navbar" >
             <Link href="/" >
-                <a className="navbar-brand">Note App</a>
+                <a className="navbar-brand">TASKS </a>
             </Link>
             <Link href="/new" >
-                <a className="create">Add Note</a>
+                <a className="create">NEW TASK</a>
             </Link>
         </nav>
     )
